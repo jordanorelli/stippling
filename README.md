@@ -4,4 +4,8 @@ Here's an example of the output:
 
 ![my stupid face](example.gif)
 
-The Processing program is able to turn its output into a series of uncompressed png images saved at regular frame intervals.  I then run these frames through [Imagemagick](http://www.imagemagick.org/script/index.php) to create an animated gif.  The specific incantation used to generate the example image is as follows: `convert -delay 10 -size 500x500 -colors 2 -loop 0 *.png out.gif`
+And the original image:
+
+![unprocessed](data/face.jpg)
+
+As you can see, the source image is totally terrible and I have bags under my eyes from going to a wedding the night before, but I don't have a copy of Photoshop or anything like that and the result was still pretty fun.  The Processing program is able to turn its output into a series of uncompressed png images saved at regular frame intervals.  I then run these frames through [Imagemagick](http://www.imagemagick.org/script/index.php) to create an animated gif.  The specific incantation used to generate the example image is as follows: `convert -delay 10 -size 500x500 -colors 2 -loop 0 *.png out.gif`
