@@ -2,7 +2,7 @@ float CELL_SIZE = 10.0;
 boolean DEBUG = false;
 PImage img;
 ParticleSystem particles;
-boolean RECORD = false;
+boolean RECORD = true;
 
 void setup() {
   size(500, 500);  
@@ -19,6 +19,16 @@ void draw() {
   particles.plan();  
   particles.move();
   particles.draw();
-//  save(frameCount + ".png");
+  if (RECORD) {
+    if (frameCount % 8 == 0) {
+      int n_frames = frameCount / 8;
+      if (n_frames > 180) {
+        return;
+      }
+      String fname = nf((n_frames), 3) + ".png";
+      println(fname);
+      save(fname);
+    }
+  }
 }
 
